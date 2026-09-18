@@ -1,0 +1,31 @@
+Student_names = ["Abed","Nirup","Jahangir","Afnan","Turan"]
+Student_marks = {"Abed":80,
+                "Nirup":63,
+                "Jahangir":54,
+                "Afnan":42,
+                "Turan":36}
+
+passed_count = 0
+failed_count = 0
+
+for name in Student_names:
+  marks = Student_marks[name]
+
+  if marks >=40:
+    status = "Pass"
+    passed_count += 1
+  else:
+    status = "Fail"
+    failed_count += 1
+  print(f"Student Name: {name} — Marks: {marks} — {status}")
+
+search_name = "Nirup"
+if search_name in Student_names:
+  print(f"\n[Search Result]: {search_name} exixts in the student list")
+else:
+  print(f"\n[Search Result]: {search_name} does not exixt in the student list")
+
+Total_students = len(Student_names)
+print(f"Total Students: {Total_students}")
+print(f"Passed Students: {passed_count}")
+print(f"Failed Students: {failed_count}")
